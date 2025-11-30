@@ -9,7 +9,7 @@ interface CafeInfoProps{
     onReset: () => void
 }
 
-function CafeInfo({votes, onVote, onReset}: CafeInfoProps){
+function CafeInfo({_votes, _onVote, _onReset}: CafeInfoProps){
     return <div className={css.container}>
     <h1 className={css.title}>Sip Happens Café</h1>
     <p className={css.description}>
