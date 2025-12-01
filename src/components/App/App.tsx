@@ -34,16 +34,15 @@ function App() {
 const totalVotesSum = votes.bad + votes.good + votes.neutral
 
   return <div className={css.app}>
-    <CafeInfo 
-      votes={votes}
-      onVote={handleVote}
-      onReset={resetVotes}
-    />
+    
+    <CafeInfo/>
+
     <VoteOptions
       onVote={handleVote}
       onReset={resetVotes}
       canReset={totalVotesSum > 0}
     />
+
     {totalVotesSum > 0 ? <VoteStats
       votes={votes}
       totalVotes={totalVotesSum}
@@ -52,6 +51,7 @@ const totalVotesSum = votes.bad + votes.good + votes.neutral
     : 0}
     />
     : <Notification/>}
+
   </div>
 }
 
